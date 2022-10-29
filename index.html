@@ -2,42 +2,65 @@
 
 <head>
 
+	<!--page title-->
 	<title>My Color Mixer</title>
 
+	<!--stylesheets-->
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+	<!--scripts-->
+	<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/includeLocal.js"></script>
+	<script defer type="text/javascript">window.jQuery || includeLocalJS("jquery-3.6.0.min.js");</script>
+	<script defer type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
 <body>
 
-	<div class="align-middle">
-	
-		<div id="div" style="background-color: black; border: solid; height: 300px; width: 300px"></div>
-		
-		<table>
-			<tr>
-				<td colspan=2 style="color:red">Red</td>
-				<td><input type="range" id="redSlider" min="0" max="255" oninput="sliderChanged()" value=0></td>
-				<td><input id="redValue" disabled style="text-align: center; width: 25px" value=0></td>
-			</tr>
-			<tr>
-				<td colspan=2 style="color:green">Green</td>
-				<td><input type="range" id="greenSlider" min="0" max="255" oninput="sliderChanged()" value=0></td>
-				<td><input id="greenValue" disabled style="text-align: center; width: 25px" value=0></td>
-			</tr>
-			<tr>
-				<td colspan=2 style="color:blue">Blue</td>
-				<td><input type="range" id="blueSlider" min="0" max="255" oninput="sliderChanged()" value=0></td>
-				<td><input id="blueValue" disabled style="text-align: center; width: 25px" value=0></td>
-			</tr>
-			<tr>
-				<td colspan=2>Hex value:</td>
-				<td><input id="hexValue" disabled style="width: 55px" value="#000000"></td>
-			</tr>
-		</table>
+	<h1>
+		<span class="letter">C</span><span class="letter">o</span><span class="letter">l</span><span class="letter">o</span><span class="letter">r</span> <span class="letter">M</span><span class="letter">i</span><span class="letter">x</span><span class="letter">e</span><span class="letter">r</span>
+	</h1>
+
+	<div id="colourBox"></div>
+
+	<div class="row">
+
+		<span class="colour-name" style="color:red">Red</span>
+		<span><input type="range" id="redSlider" min="0" max="255" oninput="sliderChanged()" value=0></span>
+		<span><input id="redValue" disabled style="text-align: center; width: 25px" value=0></span>
+
+	</div>
+	<div class="row">
+
+		<span class="colour-name" style="color:green">Green</span>
+		<span><input type="range" id="greenSlider" min="0" max="255" oninput="sliderChanged()" value=0></span>
+		<span><input id="greenValue" disabled style="text-align: center; width: 25px" value=0></span>
+
+	</div>
+	<div class="row">
+
+		<span class="colour-name" style="color:blue">Blue</span>
+		<span><input type="range" id="blueSlider" min="0" max="255" oninput="sliderChanged()" value=0></span>
+		<span><input id="blueValue" disabled style="text-align: center; width: 25px" value=0></span>
+
+	</div>
+	<div class="row">
+
+		<span>Hex value:</span>
+		<input id="hexValue" disabled style="width: 55px" value="#000000">
 
 	</div>
 
-	<script type="text/javascript" src="./js/scripts.js"></script>
+	<!--Footer-->
+	<footer class="container">
+
+		<div id="copyright" class="center middle">
+
+			&copy Sherpad Ndabambi <span id="footerYear"></span>
+
+		</div>
+		
+	</footer>
 
 </body>

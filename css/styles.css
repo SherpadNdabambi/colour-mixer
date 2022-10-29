@@ -1,8 +1,78 @@
-.align-middle{
-	left: 50%;
-	margin: 0;
-	-ms-transform: translate(-50%, -50%);
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
+body {
+	align-items: center;
+	background-color: rgb(128,191,255);
+	box-sizing: border-box;
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#colourBox {
+	background-color: black;
+	border: 1px solid;
+	height: 300px;
+	margin-bottom: 24px;
+	width: 300px;
+}
+
+.colour-name {
+	width: 40px;
+}
+
+footer {
+	margin-top: 32px;
+}
+
+.letter {
+	border: 1px solid rgb(0, 0, 64);
+	margin: 1px;
+	padding: 10px;
+	width: 32px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3px;
+	width: 250px;
+}
+
+.letter:nth-child(3n + 1) {
+	background-color: rgb(255, 255, 191);
+	color: rgb(0, 0, 64);
+}
+
+.letter:nth-child(3n + 2) {
+	background-color: rgb(0, 255, 255);
+	color: rgb(255, 0, 0);
+}
+
+.letter:nth-child(3n) {
+	background-color: rgb(255, 255, 0);
+	color: rgb(0, 0, 255);
+}
+
+.letter:nth-child(5) {
+	color: rgb();
+}
+
+.letter:nth-child(6) {
+	color: rgb();
+}
+
+.letter:nth-child(7) {
+	color: rgb();
+}
+
+.letter:nth-child(8) {
+	color: rgb();
+}
+
+.letter:nth-child(9) {
+	color: rgb();
+}
+
+.letter:nth-child(10) {
+	color: rgb();
 }

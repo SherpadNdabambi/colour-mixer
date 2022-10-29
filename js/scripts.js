@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    setFooterYear();
+});
+
 function concatenate(dec, hex){
 	let result = '';
 	if(dec < 10) return dec + hex;
@@ -20,11 +24,16 @@ function convertToHex(dec){
 	return hex;
 }
 
+function setFooterYear() {
+    let date = new Date(), year = date.getFullYear();
+    $("#footerYear").text(year.toString());
+}
+
 function sliderChanged(){
 	let colour = '#' + convertToHex(redSlider.value) + convertToHex(greenSlider.value) + convertToHex(blueSlider.value);
 	hexValue.value = colour;
 	redValue.value = redSlider.value;
 	greenValue.value = greenSlider.value;
 	blueValue.value = blueSlider.value;
-	div.style.backgroundColor = colour;
+	colourBox.style.backgroundColor = colour;
 }
